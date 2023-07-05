@@ -1,0 +1,224 @@
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  z-index: 9999;
+}
+
+.form {
+  background-color: #fff;
+  padding: 32px;
+  width: 900px;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 10px auto;
+}
+
+.form__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form__content {
+  min-height: 100px;
+  margin-top: 19px;
+  margin-bottom: 36px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.form__footer {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top: 1px solid
+    var(--default-border-color);
+  box-sizing: border-box;
+}
+
+/* header */
+.header__left {
+  display: flex;
+  align-content: center;
+  gap: 16px;
+  justify-items: end;
+}
+
+.form__title {
+  height: 32px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header__left .is-customer,
+.header__left .is-producer {
+  display: flex;
+  align-items: center;
+}
+
+.header__right {
+  display: flex;
+  align-content: baseline;
+  gap: 16px;
+  justify-items: end;
+}
+
+/* conntent */
+.content__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.content__bottom {
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  gap: 16px;
+}
+
+.nest-input__left,
+.nest-input__right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.nest__info__row {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.nest__info__colum {
+  display: flex;
+  flex-direction: column;
+  width: 185px;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.nest__dob-gender {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gender-area {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gender-input {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.gender-input input[type="radio"] {
+  width: 24px;
+  height: 24px;
+}
+
+.radio-nest {
+  display: flex;
+  gap: 4px;
+}
+
+.radio-nest .radio-label {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.input-label {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  height: 19px;
+}
+
+/* footer */
+.footer__left {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.footer__right {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 16px;
+}
+
+.custom-radio {
+  /* Hide the default radio button */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  vertical-align: middle;
+}
+
+.custom-radio:before {
+  /* Create a custom radio button */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.custom-radio::after {
+  /* Create a custom radio button */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+.custom-radio:checked:before {
+  /* Change the color of the radio button when checked */
+  background-color: var(
+    --primary-btn-background-color
+  );
+}
+
+.custom-radio:checked::after {
+  /* Change the color of the radio button when checked */
+  border-color: var(
+    --primary-btn-background-color
+  );
+}
